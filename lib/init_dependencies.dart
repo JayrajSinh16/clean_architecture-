@@ -1,3 +1,4 @@
+import 'package:clean/core/common/cubits/app_user/app_user_cubit.dart';
 import 'package:clean/core/secrets/app_secrets.dart';
 import 'package:clean/features/auth/data/datasources/auth_remote_data_source.dart';
 import 'package:clean/features/auth/data/repository/auth_repository_impl.dart';
@@ -31,9 +32,9 @@ Future<void> initDependencies() async {
   // serviceLocator.registerFactory(() => InternetConnection());
 
   // // core
-  // serviceLocator.registerLazySingleton(
-  //   () => AppUserCubit(),
-  // );
+  serviceLocator.registerLazySingleton(
+    () => AppUserCubit(),
+  );
   // serviceLocator.registerFactory<ConnectionChecker>(
   //   () => ConnectionCheckerImpl(
   //     serviceLocator(),
@@ -77,7 +78,7 @@ void _initAuth() {
         userSignUp: serviceLocator(),
         userLogIn: serviceLocator(),
         currentUser: serviceLocator(),
-        // appUserCubit: serviceLocator(),
+        appUserCubit: serviceLocator(),
       ),
     );
 }

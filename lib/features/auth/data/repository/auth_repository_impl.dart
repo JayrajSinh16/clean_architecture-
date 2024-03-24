@@ -1,7 +1,7 @@
 import 'package:clean/core/error/exceptions.dart';
 import 'package:clean/core/error/failures.dart';
 import 'package:clean/features/auth/data/datasources/auth_remote_data_source.dart';
-import 'package:clean/features/auth/domain/entities/user.dart';
+import 'package:clean/core/common/entities/user.dart';
 import 'package:clean/features/auth/domain/repository/auth_repository.dart';
 import 'package:fpdart/fpdart.dart';
 

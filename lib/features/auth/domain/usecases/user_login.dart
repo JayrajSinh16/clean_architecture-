@@ -1,7 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:clean/core/error/failures.dart';
 import 'package:clean/core/usecase/usecase.dart';
-import 'package:clean/features/auth/domain/entities/user.dart';
+import 'package:clean/core/common/entities/user.dart';
 import 'package:clean/features/auth/domain/repository/auth_repository.dart';
 import 'package:fpdart/fpdart.dart';
 

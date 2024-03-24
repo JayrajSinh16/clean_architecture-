@@ -1,6 +1,6 @@
 import 'package:clean/core/theme/theme.dart';
 import 'package:clean/features/auth/presentation/bloc/auth_bloc.dart';
-import 'package:clean/features/auth/presentation/pages/signup_page.dart';
+import 'package:clean/features/auth/presentation/pages/login_page.dart';
 import 'package:clean/init_dependencies.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.darkThemeMode,
-      home: const SignUpPage(),
+      home: const LoginPage(),
     );
   }
 }

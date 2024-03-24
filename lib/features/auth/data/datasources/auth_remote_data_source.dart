@@ -13,7 +13,7 @@ abstract interface class AuthRemoteDataSource {
     required String email,
     required String password,
   });
-  // Future<UserModel?> getCurrentUserData();
+  Future<UserModel?> getCurrentUserData();
 }
 
 class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
@@ -69,22 +69,22 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
     }
   }
 
-  // @override
-  // Future<UserModel?> getCurrentUserData() async {
-    // try {
-    //   if (currentUserSession != null) {
-    //     final userData = await supabaseClient.from('profiles').select().eq(
-    //           'id',
-    //           currentUserSession!.user.id,
-    //         );
-    //     return UserModel.fromJson(userData.first).copyWith(
-    //       email: currentUserSession!.user.email,
-    //     );
-    //   }
+  @override
+  Future<UserModel?> getCurrentUserData() async {
+    try {
+      if (currentUserSession != null) {
+        final userData = await supabaseClient.from('profiles').select().eq(
+              'id',
+              currentUserSession!.user.id,
+            );
+        return UserModel.fromJson(userData.first).copyWith(
+          email: currentUserSession!.user.email,
+        );
+      }
 
-      // return null;
-    // } catch (e) {
-    //   throw ServerException(e.toString());
-    // }
-  // }
+      return null;
+    } catch (e) {
+      throw ServerException(e.toString());
+    }
+  }
 }

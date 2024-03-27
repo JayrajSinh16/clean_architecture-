@@ -1,6 +1,6 @@
 <h1 align="center">📝 Flutter Blog Application 📝</h1>
 
-<p align="center">A beautiful and efficient Blog Application built with Flutter, following **SOLID principles**, **BLoC state management**, and **Clean Architecture**.</p>
+<p align="center">A beautiful and efficient Blog Application built with Flutter, following SOLID principles, BLoC state management, and Clean Architecture.</p>
 
 ## 🚀 Features
 
